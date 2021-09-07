@@ -16,7 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+        onWillPop: () async => false,
+        child: Scaffold(
         appBar: AppBar(title: Text("Praxis"), centerTitle: true,),
         bottomNavigationBar: BottomNavigationBar(
           items: [
@@ -34,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
-            child:Center(child:_menuContents.elementAt(_selectedIndex))));
+            child:Center(child:_menuContents.elementAt(_selectedIndex)))));
   }
 
   void _onItemTapped(int index) {
