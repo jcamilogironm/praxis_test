@@ -18,7 +18,7 @@ class DownloadUsersContent extends StatelessWidget {
                   ? LoadingIndicator()
                   : Text(vm.users.isEmpty
                           ? "No tienes usuarios almacenados"
-                          : "Usuarios descargados correctamente",
+                          : "Usuarios descargados y almacenados correctamente",
                       style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
