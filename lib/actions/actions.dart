@@ -54,4 +54,15 @@ class LaunchAction {
   LaunchAction(this.context);
 
 }
-class LoadUsersAction {}
+
+class LoadUsersAction {
+  final BuildContext context;
+
+  LoadUsersAction(this.context);
+}
+
+class LoadUsersDatabaseAction {
+  final BuildContext context;
+
+  LoadUsersDatabaseAction(this.context);
+}

@@ -5,10 +5,10 @@ import 'package:praxis/selectors/selectors.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter/material.dart';
 
-class AppData extends StatelessWidget {
+class Data extends StatelessWidget {
   final Widget Function(BuildContext context, _ViewModel vm) builder;
 
-  AppData({Key? key, required this.builder}) : super(key: key);
+  Data({Key? key, required this.builder}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

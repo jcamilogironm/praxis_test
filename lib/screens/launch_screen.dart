@@ -25,8 +25,8 @@ class _LaunchScreenState extends State<LaunchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(body: Loading(builder: (context, load) {
       return load!.isLoading && load.action == LoadAction.launch
-          ? LoadingIndicator(message: "Descargando Galeria...")
-          : AppData(builder: (context, vm) {
+          ? LoadingIndicator(message: "Descargando Galeria, espera un momento...")
+          : Data(builder: (context, vm) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,11 +38,6 @@ class _LaunchScreenState extends State<LaunchScreen> {
                   SizedBox(
                     height: 20,
                   ),
-                  /*GalleryPageView(gallery: [
-                    "https://picsum.photos/id/0/5616/3744",
-                    "https://picsum.photos/id/1/5616/3744",
-                    "https://picsum.photos/id/10/2500/1667"
-                  ])*/
                   GalleryPageView(covers: vm.covers)
                 ],
               );

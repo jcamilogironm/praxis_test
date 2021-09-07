@@ -12,6 +12,7 @@ class Launch extends StatelessWidget {
       converter: (Store<AppState> store) {
       return (context){ 
         store.dispatch(LaunchAction(context));
+        store.dispatch(LoadUsersDatabaseAction(context));
       };
     }, builder: (BuildContext context, void Function(BuildContext context) getData) {
       return LaunchScreen(getData: getData);
